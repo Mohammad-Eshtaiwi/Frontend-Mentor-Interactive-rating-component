@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+/* font-family: 'Overpass', sans-serif; */
+
+/* basic reset */
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+
+/* variables */
+:root {
+    --heading-large-size: 2.8rem;
+    --heading-medium-size: 15rem;
+    --body-font-size: 1.5rem;
+    --rating-font-size: 1.5rem;
+
+    --White: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+    --dark-background: radial-gradient(98.96% 98.96% at 50% 0%, #232a34 0%, #181e27 100%);
+    --orange: #fc7614;
+}
+
+/* basic */
+
+body {
+    font-family: "Overpass", sans-serif;
+    font-size: 1.5rem;
+    background: var(--very-dark-blue);
+    background-repeat: no-repeat;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    line-height: 2.4rem;
+}
+
+button {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* heading */
+.heading {
+    font-weight: bold;
+}
+
+.heading--lg {
+    font-size: var(--heading-large-size);
+}
+
+.heading--sm {
+    font-size: var(--heading-medium-size);
+}
+
+
+/* common */
+
+.box {
+    width: 42.2rem;
+    background: var(--dark-background);
+    border-radius: 3rem;
+}
+
+.text {
+    color: var(--light-grey);
+}
+
+.d-none {
+    display: none;
+}
+
+/* alert */
+
+.alert {
+    padding-block: 1.1rem;
+    background-color: var(--orange);
+    color: var(--White);
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+/* ratting-box */
+
+.ratting {
+    padding: 3.2rem;
+}
+
+.ratting__star {
+    margin-bottom: 3rem;
+    background-color: var(--dark-blue);
+    width: fit-content;
+    display: flex;
+    aspect-ratio: 1/1;
+    padding: 1.6rem;
+    border-radius: 1000px;
+}
+
+.ratting {
+    width: 42.2rem;
+    background-color: var(--dark-blue);
+}
+
+.ratting__heading {
+    color: var(--White);
+    margin-bottom: 1.5rem;
+}
+
+.ratting__text {
+    margin-bottom: 2.4rem;
+}
+
+.ratting__to-choose {
+    margin-bottom: 3.2rem;
+}
+
+.ratting__to-choose button {
+    width: 5.1rem;
+    color: var(--medium-grey);
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.6rem;
+    background-color: var(--dark-blue);
+    border-radius: 10000px;
+    aspect-ratio: 1/1;
+    transition: all .35s ease-in-out;
+}
+
+.ratting__to-choose button:hover {
+    background-color: var(--orange);
+    color: var(--White);
+}
+
+.ratting__to-choose button.active {
+    background-color: var(--medium-grey);
+    color: var(--White);
+}
+
+.ratting__to-choose button+button {
+    margin-left: 2.1rem;
+}
+
+.ratting__submit {
+    width: 100%;
+    background-color: var(--orange);
+    color: var(--White);
+    border-radius: 2.25rem;
+    letter-spacing: 2px;
+    padding-block: 1.1rem;
+    transition: all .35s ease-in-out;
+}
+
+.ratting__submit:hover {
+    background-color: var(--White);
+    color: var(--orange);
+}
+
+/* submitted-rate */
+
+.submitted-rate {
+    padding: 4.5rem 3.2rem;
+}
+
+.submitted-rate>* {
+    text-align: center;
+}
+
+.submitted-rate__img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 3.2rem;
+}
+
+.submitted-rate__selected-rate {
+    background-color: var(--dark-blue);
+    color: var(--orange);
+    width: fit-content;
+    padding: .4rem 2rem;
+    border-radius: 22.5rem;
+    margin-inline: auto;
+    margin-bottom: 3.2rem;
+}
+
+.submitted-rate__thanks {
+    color: var(--White);
+    margin-bottom: 1.5rem;
+}
+
+.submitted-rate__text {
+    font-size: 1.6rem;
+}
+
+
+@media screen and (max-width : 420px) {
+    html {
+        font-size: 50%;
+    }
+
+    .ratting__to-choose {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
